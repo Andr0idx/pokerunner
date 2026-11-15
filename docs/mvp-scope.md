@@ -59,6 +59,14 @@ A PokéAPI é um projeto comunitário, não uma API oficial da Pokémon Company.
 
 A seleção final da fonte depende da validação de cobertura e da estratégia de atualização dos dados.
 
+### Validação inicial
+
+A estrutura da PokéAPI oferece recursos para espécies, variantes e formas, golpes com detalhes por grupo de jogos, encontros em locais e efetividade entre tipos. Isso parece atender às necessidades do MVP, incluindo consultas específicas para ORAS.
+
+Essa avaliação confirma a estrutura disponível, mas ainda não a completude ou a precisão de todos os registros. Antes de depender da fonte, será necessário conferir amostras de formas, disponibilidade de golpes e locais de captura em ORAS.
+
+A PokéAPI é comunitária, não oficial. O projeto deverá seguir sua política de uso e armazenar em cache os dados consultados.
+
 ## Fora da primeira versão
 
 - Conexão Real Time com emuladores.
@@ -92,6 +100,7 @@ As recomendações devem explicar seus motivos e sinalizar quando não houver da
 
 ## Decisões ainda em aberto
 
-- Confirmar que a PokéAPI cobre a Pokédex completa — incluindo formas e variantes — e os dados necessários para ORAS.
-- Definir como os dados consultados serão armazenados e atualizados no projeto.
-- Definir futuramente quais outros dados do usuário poderão ser salvos na conta.
+- Confirmar que a PokéAPI cobre a Pokédex completa e os dados necessários para ORAS.
+- Definir o processo para organizar, armazenar, atualizar e armazenar em cache os dados consultados.
+- Escolher o provedor de autenticação, a hospedagem e o banco de dados da conta; MariaDB continua como candidato.
+- Decidir futuramente quais outros dados poderão ser salvos na conta.

@@ -70,28 +70,41 @@ O núcleo deverá receber informações da batalha por uma interface definida, s
 
 Um serviço online será necessário para cadastro, autenticação e sincronização entre web e desktop.
 
-Ele poderá armazenar dados do PokéRunner, como:
+Inicialmente, a conta armazenará:
 
-- times e golpes escolhidos;
-- Pokémon marcados pelo usuário;
-- preferências da conta.
+- times do usuário;
+- golpes escolhidos para cada Pokémon.
+
+Outros dados, como Pokémon marcados na Pokédex e preferências, poderão ser considerados depois.
 
 A sincronização do save ou do progresso dentro do jogo não está definida como função do PokéRunner.
 
 A implementação deverá proteger credenciais e dados pessoais. Senhas não devem ser armazenadas em texto puro. O provedor de autenticação, o banco de dados e as regras de retenção ainda serão escolhidos.
+
+### Persistência de dados
+
+O catálogo de Pokémon será mantido separadamente dos dados pessoais. A proposta inicial é organizar uma cópia em cache dos dados necessários da PokéAPI em `packages/data`, compartilhada pela aplicação web e pelo aplicativo desktop.
+
+Os dados do usuário — inicialmente times e golpes escolhidos — serão acessados pela API do PokéRunner. A aplicação web e o aplicativo desktop não deverão se conectar diretamente ao banco de dados.
+
+MariaDB é uma opção candidata para armazenar os dados dos times. O banco deverá ficar acessível apenas pela API, sem expor sua porta diretamente à internet. O provedor de autenticação, a hospedagem e a escolha final do banco ainda serão definidos.
 
 ## Fluxo simplificado
 
 ```mermaid
 flowchart LR
     User["Usuário"] --> Web["Aplicação web"]
-    User --> Desktop["Aplicação desktop"]
+    User --> Desktop["Aplicativo desktop"]
 
-    Web --> Core["Núcleo compartilhado"]
+    PokeAPI["PokéAPI"] -->|"Importação e cache"| Catalog["Catálogo em packages/data"]
+    Catalog --> Core["Núcleo compartilhado"]
+
+    Web --> Core
     Desktop --> Core
 
-    Web <--> Account["Serviço de conta e dados"]
+    Web <--> Account["API de conta do PokéRunner"]
     Desktop <--> Account
+    Account <--> DB["MariaDB candidato"]
 
     Desktop --> Adapter["Integração local com emulador"]
     Adapter --> Core
