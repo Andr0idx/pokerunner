@@ -128,9 +128,11 @@ pokerunner/
 ├── docs/
 │   ├── product-vision.md
 │   ├── legacy-review.md
+│   ├── mvp-scope.md
 │   ├── architecture.md
 │   ├── roadmap.md
-│   └── mvp-scope.md
+│   ├── api-contract.md
+│   └── data-model.md
 └── README.md
 ```
 

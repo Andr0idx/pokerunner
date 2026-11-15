@@ -20,9 +20,11 @@ As sugestões de golpes serão apresentadas durante a montagem do time. Nas bata
 
 - [Visão do produto](docs/product-vision.md)
 - [Análise dos projetos anteriores](docs/legacy-review.md)
+- [Escopo inicial do MVP](docs/mvp-scope.md)
 - [Arquitetura inicial](docs/architecture.md)
 - [Roadmap inicial](docs/roadmap.md)
-- [Escopo inicial do MVP](docs/mvp-scope.md)
+- [Contrato inicial da API](docs/api-contract.md)
+- [Modelo inicial de dados](docs/data-model.md)
 
 ## Estado atual
 
