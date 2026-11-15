@@ -115,8 +115,8 @@ pokerunner/
 ├── docs/
 │   ├── product-vision.md
 │   ├── legacy-review.md
-│   │── architecture.md
-│   │── roadmap.md
+│   ├── architecture.md
+│   └── roadmap.md
 └── README.md
 ```
 

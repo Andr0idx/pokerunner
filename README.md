@@ -21,6 +21,7 @@ As sugestões de golpes serão apresentadas durante a montagem do time. Nas bata
 - [Visão do produto](docs/product-vision.md)
 - [Análise dos projetos anteriores](docs/legacy-review.md)
 - [Arquitetura inicial](docs/architecture.md)
+- [Roadmap inicial](docs/roadmap.md)
 
 ## Estado atual
 
