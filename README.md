@@ -22,6 +22,7 @@ As sugestões de golpes serão apresentadas durante a montagem do time. Nas bata
 - [Análise dos projetos anteriores](docs/legacy-review.md)
 - [Arquitetura inicial](docs/architecture.md)
 - [Roadmap inicial](docs/roadmap.md)
+- [Escopo inicial do MVP](docs/mvp-scope.md)
 
 ## Estado atual
 
