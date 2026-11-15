@@ -138,3 +138,135 @@ button:focus-visible {
     border-radius: 22px;
   }
 }
+
+.pokedex-page {
+  background: #fff;
+}
+
+.pokedex-page h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.search-field {
+  display: grid;
+  gap: 8px;
+  max-width: 420px;
+  margin: 36px 0 28px;
+  color: #35425e;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.search-field input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dfe3ef;
+  border-radius: 12px;
+  color: #202d4b;
+  background: #fbfcff;
+  font: inherit;
+}
+
+.search-field input:focus {
+  border-color: #7569dc;
+  outline: 3px solid rgb(117 105 220 / 15%);
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pokemon-card {
+  display: flex;
+  gap: 18px;
+  min-height: 180px;
+  padding: 18px;
+  border: 1px solid #e3e7f2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(32 45 75 / 6%);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgb(32 45 75 / 11%);
+}
+
+.pokemon-card img {
+  align-self: center;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.pokemon-card > div {
+  min-width: 0;
+}
+
+.pokemon-card span {
+  color: #7a86a0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pokemon-card h2 {
+  margin: 4px 0 10px;
+  color: #202d4b;
+  font-size: 1.35rem;
+}
+
+.pokemon-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pokemon-card li {
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #315f45;
+  background: #dff4e7;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pokemon-card li:nth-child(2) {
+  color: #665124;
+  background: #fff0c9;
+}
+
+.pokemon-card p {
+  margin: 14px 0 0;
+  color: #65718a;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.empty-message {
+  margin: 28px 0 0;
+  color: #65718a;
+}
+
+@media (max-width: 780px) {
+  .pokemon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .pokemon-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .pokemon-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
