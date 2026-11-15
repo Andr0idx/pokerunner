@@ -26,7 +26,7 @@ As sugestões de golpes serão apresentadas durante a montagem do time. Nas bata
 
 O PokéRunner está começando com uma estrutura limpa. `Projeto-PokeGuide` e `Runner-Pok-Guide` são referências para entender ideias e funções anteriores; o novo código será desenvolvido separadamente e de forma organizada.
 
-As tecnologias, o serviço de contas e os detalhes da integração com emuladores serão definidos e validados antes de sua implementação.
+A stack inicial planejada é JavaScript, sem TypeScript nesta etapa, com React para as interfaces, Vite para a aplicação web e Electron para o aplicativo desktop. Essa base poderá ser revisada durante o desenvolvimento. O serviço de contas, o banco de dados e a tecnologia da API ainda serão escolhidos.
 
 ## Desenvolvimento
 
