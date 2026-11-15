@@ -58,6 +58,14 @@ A primeira integração a ser investigada é Azahar com Pokémon Omega Ruby/Alph
 
 O núcleo deverá receber informações da batalha por uma interface definida, sem precisar conhecer os detalhes internos de cada emulador.
 
+### Tecnologias iniciais
+
+- JavaScript como linguagem inicial, sem TypeScript nesta etapa.
+- React para as interfaces web e desktop.
+- Vite para desenvolver e gerar a versão web.
+- Electron para o aplicativo desktop.
+- O serviço de contas e a tecnologia da API ainda serão escolhidos.
+
 ### Serviço de conta e sincronização
 
 Um serviço online será necessário para cadastro, autenticação e sincronização entre web e desktop.
